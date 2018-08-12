@@ -1,14 +1,12 @@
 package com.charas.account.service.user;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
-import com.charas.account.models.UserSession;
-import com.charas.account.models.UserToken;
 import com.charas.account.models.user.UserRegistrationRequestModel;
 import com.charas.account.repository.UserAccountRepository;
 import com.charas.account.repository.UserSessionRepository;
 import com.charas.account.repository.UserTokenRepository;
+import com.charas.account.repository.model.UserSession;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceImpl implements UserService {

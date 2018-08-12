@@ -1,8 +1,7 @@
 package com.charas.account.repository;
 
+import com.charas.account.repository.model.UserAccount;
 import org.springframework.data.repository.CrudRepository;
-
-import com.charas.account.models.UserAccount;
 
 public interface UserAccountRepository extends CrudRepository<UserAccount, Integer>{
 	

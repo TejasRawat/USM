@@ -1,4 +1,4 @@
-package com.charas.account.model;
+package com.charas.account.repository.model;
 
 
 import java.io.Serializable;
