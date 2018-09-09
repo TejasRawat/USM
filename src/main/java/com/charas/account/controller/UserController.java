@@ -20,16 +20,6 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 	
-	
-	@GetMapping(value="/hi")
-	public String sayHello(){
-		
-		boolean isFormCreated  = userService.registerUser(null);
-		
-		return "Hello";
-	}
-	
-	
 	@PostMapping(value = "/user", produces = "application/json", consumes = "application/json")
 	public ResponseEntity<ApiResponseModel<Boolean>> register(UserRegistrationRequestModel 
 							userRegistrationRequestModel){
@@ -41,6 +31,11 @@ public class UserController {
 		apiResponse.setData(isFormCreated);
 		
 		return new ResponseEntity<ApiResponseModel<Boolean>>(apiResponse, new HttpHeaders(), HttpStatus.OK);
+	}
+
+	@GetMapping(value="/sayHello")
+	public String sayHello(){
+		return "hello";
 	}
 	
 
